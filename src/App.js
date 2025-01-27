@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Wallet from "../components/Wallet";
+import LotteryEntry from "../components/LotteryEntry";
+import PlayersList from "../components/PlayersList";
+import WinnerDisplay from "../components/WinnerDisplay";
+import AdminControls from "../components/AdminControls";
+
+const CONTRACT_ADDRESS = "YOUR_CONTRACT_ADDRESS"; // Replace with deployed contract address
+const CONTRACT_ABI = [/* Your ABI Here */];
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [account, setAccount] = useState(null);
+    const [contract, setContract] = useState(null);
+    const [manager, setManager] = useState("");
+    const [winner, setWinner] = useState(null);
+
+    return (
+        <div className="App">
+            <h1>Lottery DApp</h1>
+            <Wallet 
+                account={account} 
+                setAccount={setAccount} 
+                setContract={setContract} 
+                setManager={setManager} 
+                contractAbi={CONTRACT_ABI}
+                contractAddress={CONTRACT_ADDRESS}
+            />
+            <LotteryEntry contract={contract} />
+            <PlayersList contract={contract} />
+            <WinnerDisplay winner={winner} />
+            {account === manager && <AdminControls contract={contract} setWinner={setWinner} />}
+        </div>
+    );
 }
 
 export default App;
