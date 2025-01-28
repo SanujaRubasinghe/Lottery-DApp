@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Wallet from "../components/Wallet";
-import LotteryEntry from "../components/LotteryEntry";
-import PlayersList from "../components/PlayersList";
-import WinnerDisplay from "../components/WinnerDisplay";
-import AdminControls from "../components/AdminControls";
+import Wallet from "../temp/Wallet";
+import LotteryEntry from "./temp/LotteryEntry";
+import PlayersList from "./temp/PlayersList";
+import WinnerDisplay from "./temp/WinnerDisplay";
+import AdminControls from "./temp/AdminControls";
 
 const CONTRACT_ADDRESS = "YOUR_CONTRACT_ADDRESS"; // Replace with deployed contract address
 const CONTRACT_ABI = [/* Your ABI Here */];
