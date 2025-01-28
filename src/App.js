@@ -5,7 +5,7 @@ import PlayersList from "./temp/PlayersList";
 import WinnerDisplay from "./temp/WinnerDisplay";
 import AdminControls from "./temp/AdminControls";
 
-const CONTRACT_ADDRESS = "0x5e1E55094C17ae4250A2bf9F96D4C5Ea88cA6363"; // Replace with deployed contract address
+const CONTRACT_ADDRESS = "0xe5D68dAb0E19A3f2f7197C114C3270Ee219B79aF"; // Replace with deployed contract address
 const CONTRACT_ABI = [
 	{
 		"inputs": [],
@@ -34,6 +34,19 @@ const CONTRACT_ABI = [
 				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getPlayers",
+		"outputs": [
+			{
+				"internalType": "address payable[]",
+				"name": "",
+				"type": "address[]"
 			}
 		],
 		"stateMutability": "view",

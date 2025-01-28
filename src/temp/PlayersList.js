@@ -6,10 +6,12 @@ const PlayersList = ({ contract }) => {
     const fetchPlayers = async () => {
         if (contract) {
             try {
-                const playersList = await contract.players();
+                // Call the getPlayers function in the smart contract
+                const playersList = await contract.getPlayers(); // Ensure this matches your contract
                 setPlayers(playersList);
             } catch (error) {
                 console.error("Failed to fetch players:", error);
+                alert("Could not fetch players. Check the console for details.");
             }
         } else {
             alert("Please connect your wallet first.");
