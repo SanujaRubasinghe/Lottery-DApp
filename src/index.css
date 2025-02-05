@@ -1,24 +1,120 @@
+/* Global styles */
+
 body {
+  font-family: 'poppins','Roboto', sans-serif;
+  background-image: url('../Orange\ and\ White\ Gradient\ Bold\ Gym\ &\ Fitness\ Flyer.png');
+  background-size: cover; /* Cover ensures the image covers the entire page */
+  background-position: center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  background-attachment: fixed; /* Keeps the background image fixed on scroll */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+ 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.App {
+  width: 80%;
+  max-width: 500px;
+  max-height: 530px;
+  height: 70vh;
+ 
+  padding-bottom: 150px;
+  
+  margin-top: 20px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.26); /* Semi-transparent white */
+ 
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  
 }
 
-.Student{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2em;
-  padding: 10px;
-  border: 1px solid;
+
+/* Heading styles */
+h1 {
+  font-size: 2.5rem;
+  color: #141414;
+  margin-bottom: 20px;
 }
 
-.Student p{
-  margin: 0;
+h2 {
+  font-size: 1.5rem;
+  color: #1b1b1b;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+/* Players list styling */
+.players-container {
+  list-style-type: none;
+  padding: 0;
+}
+
+.player-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Winner display */
+.winner-display h2 {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+/* Admin Controls */
+.admin-controls {
+  margin-top: 40px;
+}
+
+.admin-controls button {
+  font-size: 20px;
+}
+
+/* For responsive screens */
+@media (max-width: 600px) {
+  .App {
+      width: 90%;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  button {
+      width: 100%;
+      padding: 15px 0;
+  }
+
+  .player-card {
+      font-size: 14px;
+      padding: 8px;
+  }
 }

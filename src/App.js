@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './index.css'
 import Wallet from "./temp/Wallet";
 import LotteryEntry from "./temp/LotteryEntry";
 import PlayersList from "./temp/PlayersList";
@@ -121,7 +122,7 @@ function App() {
             <PlayersList contract={contract} />
             <WinnerDisplay winner={winner} />
 
-            <h1>Prctice example for array mapping function</h1>
+            
 
             
 
