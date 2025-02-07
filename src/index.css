@@ -1,24 +1,198 @@
+/* Global styles */
 body {
+  font-family: 'Poppins', 'Roboto', sans-serif;
+  background-image: url('../img1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  width: 90%; /* Increase width to utilize more space */
+  max-width: 1200px; /* Increase max-width for larger screens */
+  max-height: 100vh; /* Allow the height to adjust dynamically */
+  padding: 20px;
+  margin: auto;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
-.Student{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2em;
-  padding: 10px;
-  border: 1px solid;
+.Head {
+  color: white; /* Apply white text to everything inside the .Head div */
 }
 
-.Student p{
-  margin: 0;
+/* Optional: Ensure specific headings are white */
+.h1-tag, h2, h3 {
+  color: white;
+}
+
+.h3-tag{
+  color: #ddd;
+}
+
+
+/* Heading styles */
+h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+
+
+h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+h3, h2, p {
+  margin: 5px 0; /* Reduce space between them */
+  line-height: 1.2; /* Decrease line height for a tighter fit */
+}
+
+.h1-tag{
+  margin-top: -10px;
+
+}
+
+.Head{
+  font-family: 'Poppins', 'Roboto', sans-serif;
+  color: aliceblue;
+
+}
+
+.p-tag{
+  color: #ffffff;
+}
+
+/* Ticket container styles */
+.ticket-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between ticket pairs */
+  justify-content: space-between; /* Distribute space evenly */
+  margin-top: 70px;
+  margin-bottom: 20px; /* Space between rows */
+}
+
+
+.ticket-pair:nth-child(1) { background-color: #520707; }
+.ticket-pair:nth-child(2) { background-color: #260052; }
+.ticket-pair:nth-child(3) { background-color: #500031; }
+.ticket-pair:nth-child(4) { background-color: #0c3f02; }
+.ticket-pair:nth-child(5) { background-color: #d80338; }
+.ticket-pair:nth-child(6) { background-color: #0d1e3a; }
+
+
+.ticket-pair:hover {
+  transform: scale(1.05); /* Slightly increase the size on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); /* Enhance shadow for depth */
+  background-color: rgb(0, 0, 0);
+  transition: all 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+
+/* Ticket pair styles */
+.ticket-pair {
+  display: flex;
+  flex-direction: column; /* Stack Ticket and LotteryEntry vertically */
+  align-items: center; /* Center items horizontally */
+  gap: 10px; /* Space between Ticket and LotteryEntry */
+  width: calc(33.33% - 14px); /* 3 tickets per row with spacing */
+  border: 1px solid #5f5e5e; /* Optional: Add a border for visual separation */
+  padding: 10px; /* Optional: Add padding inside the ticket pair */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  /* background-color: rgba(255, 255, 255, 0.8);  */
+  /* Semi-transparent background for readability */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.397); /* Subtle shadow for depth */
+  background-color: rgba(0, 0, 0, 0.815);
+}
+
+
+.connect-wallet{
+  padding-right: -10px;
+  margin-top: -120px;
+  margin-right: -800px;
+}
+
+
+
+
+
+/* Buttons */
+button {
+  background-color: #37c23bfb;
+  color: white;
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #003503;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+/* Players list styling */
+.players-container {
+  list-style-type: none;
+  padding: 0;
+}
+
+.player-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Winner display */
+.winner-display h2 {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+/* Admin Controls */
+.admin-controls {
+  margin-top: 40px;
+}
+
+.admin-controls button {
+  font-size: 20px;
+}
+
+/* For responsive screens */
+@media (max-width: 600px) {
+  .App {
+      width: 90%;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  button {
+      width: 100%;
+      padding: 15px 0;
+  }
+
+  .player-card {
+      font-size: 14px;
+      padding: 8px;
+  }
 }
