@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './index.css'
+import './index.css'
 import Wallet from "./temp/Wallet";
 import LotteryEntry from "./temp/LotteryEntry";
 import PlayersList from "./temp/PlayersList";
