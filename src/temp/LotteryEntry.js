@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Children, useState } from "react";
 import { ethers } from "ethers";
 
 const LotteryEntry = ({ contract ,entry}) => {
@@ -23,13 +23,16 @@ const LotteryEntry = ({ contract ,entry}) => {
     };
 
     return (
-        <div>
+        <div className="entry">
             <h2>Enter Lottery</h2>
             <button onClick={enterLottery} disabled={isEntering}>
                 {isEntering ? "Processing..." : `Buy ticket 1 ETH : ${entry}`}
             </button>
+            {children}
         </div>
     );
 };
 
 export default LotteryEntry;
+
+
