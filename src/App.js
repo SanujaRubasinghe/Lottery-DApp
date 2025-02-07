@@ -118,13 +118,14 @@ function App() {
                 contractAbi={CONTRACT_ABI}
                 contractAddress={CONTRACT_ADDRESS}
             />
-            <LotteryEntry contract={contract} />
+            <LotteryEntry contract={contract} entry={"entry1"}>
+				<p>sdnskjdvn</p>
+			</LotteryEntry>
+            <LotteryEntry contract={contract} entry={"entry2"}>
+				<button>Click me</button>
+			</LotteryEntry>
             <PlayersList contract={contract} />
             <WinnerDisplay winner={winner} />
-
-            
-
-            
 
             {account === manager && <AdminControls contract={contract} setWinner={setWinner} />}
         </div>
