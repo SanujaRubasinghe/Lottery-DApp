@@ -83,8 +83,8 @@ h3, h2, p {
 .ticket-pair:nth-child(1) { background-color: #520707; }
 .ticket-pair:nth-child(2) { background-color: #260052; }
 .ticket-pair:nth-child(3) { background-color: #500031; }
-.ticket-pair:nth-child(4) { background-color: #0c3f02; }
-.ticket-pair:nth-child(5) { background-color: #d80338; }
+.ticket-pair:nth-child(4) { background-color: #3771a1; }
+.ticket-pair:nth-child(5) { background-color: #FFA500; }
 .ticket-pair:nth-child(6) { background-color: #0d1e3a; }
 
 
@@ -103,7 +103,7 @@ h3, h2, p {
   align-items: center; /* Center items horizontally */
   gap: 10px; /* Space between Ticket and LotteryEntry */
   width: calc(33.33% - 14px); /* 3 tickets per row with spacing */
-  border: 1px solid #5f5e5e; /* Optional: Add a border for visual separation */
+  border: 1px solid #ffffff; /* Optional: Add a border for visual separation */
   padding: 10px; /* Optional: Add padding inside the ticket pair */
   box-sizing: border-box; /* Ensure padding is included in the width */
   /* background-color: rgba(255, 255, 255, 0.8);  */
@@ -139,7 +139,8 @@ button {
 }
 
 button:hover {
-  background-color: #003503;
+  background-color: #0d6114;
+  transform: scale(1.05);
 }
 
 button:disabled {
