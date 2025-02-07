@@ -1,7 +1,7 @@
 import React, { Children, useState } from "react";
 import { ethers } from "ethers";
 
-const LotteryEntry = ({contract, entry, children}) => {
+const LotteryEntry = ({ contract ,entry}) => {
     const [isEntering, setIsEntering] = useState(false);
 
     const enterLottery = async () => {
@@ -26,7 +26,7 @@ const LotteryEntry = ({contract, entry, children}) => {
         <div className="entry">
             <h2>Enter Lottery</h2>
             <button onClick={enterLottery} disabled={isEntering}>
-                {isEntering ? "Processing..." : `Enter Lottery: ${entry}`}
+                {isEntering ? "Processing..." : `Buy ticket 1 ETH : ${entry}`}
             </button>
             {children}
         </div>
